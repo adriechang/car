@@ -1,0 +1,86 @@
+$col_xl: 1200px;
+$col_md: 991px;
+$col_sd: 768px;
+$col_sm: 468px;
+@mixin rwd($col_xl) {
+    @media (max-width: $col_xl) {
+        @content;
+    }
+}
+
+@mixin rwd($col_md) {
+    @media (max-width: $col_md) {
+        @content;
+    }
+}
+
+@mixin rwd($col_sd) {
+    @media (max-width: $col_sd) {
+        @content;
+    }
+}
+
+@mixin rwd($col_sm) {
+    @media (max-width: $col_sm) {
+        @content;
+    }
+}
+
+@mixin text_color_size($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin text_color_bg($bg) {
+    color: var(--white);
+    background: $bg;
+}
+
+@mixin border_radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transform($translate) {
+    -moz-transform: $translate;
+    -webkit-transform: $translate;
+    -ms-transform: $translate;
+    transform: $translate;
+}
+
+@mixin flex_basis($width) {
+    -webkit-flex-basis: $width;
+    -ms-flex-preferred-size: $width;
+    flex-basis: $width;
+    max-width: $width;
+}
+
+@mixin box_shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin text_fill_color($transition) {
+    -webkit-text-fill-color: $transition;
+    -moz-text-fill-color: $transition;
+    -ms-text-fill-color: $transition;
+}
+
+@mixin grid_row_gap($space) {
+    grid-column-gap: $space;
+    grid-row-gap: $space;
+    -moz-column-gap: $space;
+    column-gap: $space;
+    row-gap: $space;
+}

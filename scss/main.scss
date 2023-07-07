@@ -1,0 +1,2294 @@
+@import "variable";
+@import "mixinRwd";
+@import "mixinFunction";
+.sticky_top {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5;
+}
+
+.pt_0 {
+    padding-top: 0!important;
+}
+
+.pd_0 {
+    padding: 0 !important;
+}
+
+.border_0 {
+    border: 0!important;
+}
+
+.d_inline_grid {
+    display: inline-grid;
+    width: 100%;
+}
+
+.mb_0 {
+    margin-bottom: 0;
+}
+
+.fixed_top {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.font_black {
+    color: var(--text_black);
+}
+
+.font_white {
+    color: var(--white);
+}
+
+.font_red {
+    color: var(--red);
+}
+
+.bg_white {
+    background: var(--white);
+}
+
+.car_black {
+    background: var(--black);
+}
+
+.car_white {
+    background: var(--white);
+}
+
+.car_silver {
+    background: $car_silver;
+}
+
+.car_gary {
+    background: $car_gary;
+}
+
+.car_blue {
+    background: $car_blue;
+}
+
+.car_red {
+    background: $car_red;
+}
+
+.car_green {
+    background: $car_green;
+}
+
+.car_brown {
+    background: $car_brown;
+}
+
+.car_yellow {
+    background: $car_yellow;
+}
+
+.car_og {
+    background: $car_og;
+}
+
+.car_purple {
+    background: $car_purple;
+}
+
+.car_pink {
+    background: $car_pink;
+}
+
+.table_responsive {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: .5em;
+}
+
+.table_style {
+    width: 100%;
+    margin-bottom: 1em;
+} //table
+.table_style {
+    width: 100%;
+    margin-bottom: 1em;
+    th,
+    td {
+        padding: .5em;
+        vertical-align: middle;
+        border: var(--border_gary);
+        border-color: var(--gary);
+    }
+    th {
+        background: var(--light_gary);
+        color: var(--deep_blue);
+        text-align: center;
+    }
+    td {
+        font-size: 15px;
+    }
+}
+
+.main_container {
+    margin: auto;
+    width: var(--container_width);
+    @include rwd($col_xl) {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.normal_shadow {
+    @include box_shadow(var(--normal_shadow));
+}
+
+.main_box {
+    padding: 1.5em 0;
+    @include rwd($col_md) {
+        padding: 1em 0;
+    }
+}
+
+.web_show {
+    @include rwd($col_md) {
+        display: none !important;
+    }
+}
+
+.m_show {
+    display: none;
+    @include rwd($col_md) {
+        display: block;
+    }
+}
+
+.mflex_show {
+    display: none;
+    @include rwd($col_md) {
+        display: flex;
+    }
+}
+
+.box_style {
+    padding: 1.5em 1em;
+    // display: inline-block;
+    // display: inline-flex;
+    margin-bottom: 1.2em;
+    @include box_shadow(var(--normal_shadow));
+    @include rwd($col_md) {
+        padding: 1em .75em;
+    }
+}
+
+.border_5 {
+    @include border_radius(5px);
+}
+
+.img_contain {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    @include rwd($col_md) {
+        font-size: $text_xg;
+    }
+    &.title {
+        @include rwd($col_md) {
+            padding: 0 .7em;
+        }
+    }
+}
+
+h2 {
+    font-size: $text_lg;
+    margin-bottom: .5em;
+    @include rwd($col_md) {
+        font-size: $text_ml;
+    }
+    &.h2_hot {
+        color: var(--blue);
+        font-size: 20px;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 4px var(--blue) solid;
+        display: inline-block;
+    }
+}
+
+.title_box {
+    font-size: $text_xg;
+    margin-bottom: .5em;
+}
+
+//表頭
+header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5;
+    @include rwd($col_md) {
+        position: relative !important;
+        top: initial !important;
+        z-index: initial;
+    }
+}
+
+.header_box {
+    height: var(--header_height);
+    padding: 0 1em;
+    @include rwd($col_md) {
+        padding: 0 .7em;
+    }
+    .m_burger_box {
+        padding: .5em;
+        display: none;
+        @include rwd($col_md) {
+            display: flex;
+        }
+        >i {
+            font-size: $text_xxl;
+            color: var(--deep_blue);
+        }
+    }
+    .logo_box {
+        display: flex;
+        @include rwd($col_md) {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+        >a {
+            display: inline-flex;
+            >img {
+                margin: 0 auto 0 0;
+                max-height: var(--logo_size);
+            }
+        }
+    }
+    .right_box {
+        height: var(--header_height);
+        nav {
+            @include rwd($col_md) {
+                display: none;
+            }
+            >a {
+                margin: 0 .65em 0 0;
+                padding: 0 .5em;
+                color: var(--deep_blue);
+                &:hover,
+                &.active {
+                    background: var(--deep_blue);
+                    color: var(--white);
+                }
+            }
+        }
+        .social_box {
+            img {
+                @include border_radius(50%);
+                max-width: var(--social_size);
+            }
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}
+
+.index_header {
+    background: var(--light_blue);
+    .header_box {
+        @include rwd($col_md) {
+            padding: 0 0.7em !important;
+        }
+    }
+}
+
+//首頁篩選
+.search_box {
+    background: var(--light_blue);
+    padding: 2em 1em 3em;
+    @include rwd($col_md) {
+        padding: 1.25em .7em 2em;
+    }
+    .search_cont {
+        @include rwd($col_md) {
+            display: block;
+        }
+        .car_search_item {
+            margin-bottom: .5em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .item {
+            margin-right: .5em;
+            &:first-child {
+                select {
+                    border-radius: var(--select_radius) 0 0 var(--select_radius);
+                    @include rwd($col_md) {
+                        border-radius: var(--select_radius) var(--select_radius) 0 0;
+                    }
+                }
+            }
+            @include rwd($col_md) {
+                margin: 0 0 .5em 0;
+            }
+            .select_box {
+                select {
+                    padding: 2.75em 1em 1em;
+                    font-size: 18px;
+                    border: 0;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    @include rwd($col_md) {
+                        padding: .75em .5em .75em 2.5em;
+                    }
+                }
+                .select_text {
+                    font-size: 16px;
+                    left: 1.2em;
+                    top: 1.2em;
+                    @include rwd($col_md) {
+                        left: 1em;
+                        top: .8em;
+                        min-width: 20px;
+                        >i {
+                            font-size: 20px;
+                            color: var(--deep_blue);
+                        }
+                    }
+                }
+            }
+        }
+        button {
+            font-size: $text_lg;
+            padding: 0 1.25em;
+            margin-left: .5em;
+            @include rwd($col_md) {
+                padding: 0.5em;
+                width: 100%;
+                font-size: $text_ml;
+                margin: .75em auto auto 0;
+            }
+        }
+        section {
+            min-width: var(--select_min_width);
+            .item {
+                @include rwd($col_md) {
+                    margin: 0 .4em .5em 0;
+                    &:last-child {
+                        margin: 0 0 .5em 0;
+                    }
+                }
+                &:first-child {
+                    select {
+                        @include border_radius(0);
+                        @include rwd($col_md) {
+                            border-radius: 0 0 0 var(--select_radius);
+                        }
+                    }
+                }
+                &:last-child {
+                    select {
+                        border-radius: 0 0 var(--select_radius) 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//首頁車子廠牌
+.car_lable_box {
+    @include grid_row_gap(var(--car_lable_space));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    display: grid;
+    @include rwd($col_md) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    >.item {
+        width: 100%;
+        border: var(--border_gary);
+        padding: .75em .5em;
+        &:hover {
+            border-color: var(--blue);
+            opacity: .85;
+        }
+        >img {
+            max-height: var(--car_lable_logo);
+        }
+    }
+}
+
+.car_type_box {
+    .left_box {
+        width: var(--car_type_left_w);
+        @include rwd($col_md) {
+            width: 100%;
+        }
+    }
+}
+
+.car_lable_box_new {
+    .item_box {
+        a {
+            border: var(--border_gary);
+            padding: .75em .5em;
+            margin-bottom: .55em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                border-color: var(--blue);
+                opacity: .85;
+            }
+            img {
+                max-height: var(--car_lable_logo);
+            }
+        }
+    }
+}
+
+//首頁車款區塊_一開始設定
+.car_model_box {
+    @extend .car_lable_box;
+    margin-top: 1.5em;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include rwd($col_md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .item {
+        padding: .75em;
+        @include rwd($col_md) {
+            padding: .5em;
+        }
+        >img {
+            margin: 0 auto;
+            width: 100%;
+            height: initial;
+            max-height: var(--car_model_size);
+            @include rwd($col_md) {
+                max-height: initial;
+            }
+        }
+        .car_text {
+            padding-top: .75em;
+            margin-top: .75em;
+            width: 100%;
+            height: initial;
+            border-top: var(--border_gary);
+        }
+    }
+}
+
+//首頁車款+車種
+.find_car_box {
+    .car_type_box {
+        .right_box {
+            margin: 0 0 1.25em 0;
+            .car_icon_box {
+                >.item {
+                    border: var(--border_gary);
+                    margin-right: .75em;
+                    width: 100%;
+                    padding: .39em 1em;
+                    &:hover {
+                        border-color: var(--blue);
+                        opacity: .85;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    img {
+                        max-width: 30px;
+                        margin: 0 0.5em 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//手機板車種
+.m_car_icon_box {
+    margin-bottom: .75em;
+    @extend .car_icon_box;
+    .item {
+        >img {
+            max-width: 45px;
+        }
+    }
+}
+
+//首頁最新中古車
+.used_car {
+    background: var(--light_gary);
+    .used_car_box {
+        margin-top: 1em;
+        .item {
+            padding: .7em;
+            border: none;
+            @include box_shadow(var(--normal_shadow));
+            @include rwd($col_md) {
+                padding: .5em;
+            }
+            &:hover {
+                background: var(--light_yellow);
+                opacity: 1;
+            }
+            .img_box {
+                border: var(--border_gary);
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+                .car_origin_box {
+                    bottom: 0;
+                    right: 0;
+                    display: inline-block;
+                    padding: .35em .65em;
+                    border-radius: 10px 0 0 0;
+                    >img {
+                        max-width: 80px;
+                    }
+                }
+            }
+            .used_car_info {
+                width: 100%;
+                margin-top: .75em;
+                .title {
+                    padding-bottom: .25em;
+                    font-size: 18px;
+                    border-bottom: var(--border_gary);
+                }
+                .sec_info {
+                    @extend .car_lable_box;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    >p {
+                        &.item {
+                            border: 0;
+                            padding: .35em .5em;
+                            font-size: 14px;
+                            background: var(--light_blue);
+                            &:hover {
+                                pointer-events: none !important;
+                                background: var(--light_blue);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main_used_car {
+    @extend .used_car;
+}
+
+.main_info {
+    font-size: 15px;
+    >.info_item {
+        padding: .5em;
+        width: $threeHalvesWidth;
+        .impor_text {
+            font-size: 18px;
+            padding: .1em 0;
+            // @include rwd($col_md) {
+            //     font-size: 20px;
+            // }
+        }
+        &:first-child {
+            .impor_text {
+                font-size: 24px;
+                @include rwd($col_md) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+//首頁二手車資訊
+.sec_carinfo_cont {
+    @extend .car_model_box;
+    margin-top: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include rwd($col_sm) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    >.item {
+        padding: .25em;
+        border: none;
+        >img {
+            max-height: initial;
+            margin: 0;
+            height: initial;
+        }
+        .car_text {
+            margin-top: 0;
+            border-top: 0;
+        }
+    }
+}
+
+.video_carinfo_cont {
+    @extend .sec_carinfo_cont;
+}
+
+.see_more_btn {
+    margin-top: 1.5em;
+    .more_item {
+        padding: .75em;
+        min-width: var(--see_more_size);
+    }
+}
+
+//麵包屑
+.bread_box {
+    margin-bottom: 1.25em;
+    @include rwd($col_md) {
+        margin-bottom: .5em;
+        padding: 1.25em .7em 0.5em;
+    }
+    .bread_cont {
+        >span {
+            color: var(--bread_gary);
+        }
+        >a {
+            color: var(--blue);
+            margin-right: .7em;
+            &:hover {
+                opacity: .85;
+            }
+            &:after {
+                content: ">";
+                width: 2px;
+                height: 0;
+                position: absolute;
+                font-size: 12px;
+                color: var(--bread_after_gary);
+            }
+        }
+    }
+}
+
+//二手車列表搜尋
+.car_search_box {
+    @extend .search_box;
+    background: none;
+    padding: 1em 1em 0;
+    @include rwd($col_md) {
+        padding: 0;
+    }
+    .search_cont {
+        border-left: 3px var(--search_gray) solid;
+        padding-left: .5em;
+    }
+    .car_item {
+        margin-bottom: .5em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            font-size: 15px;
+            margin-right: 2em;
+        }
+        .search_item_info {
+            width: 100%;
+            .left_box {
+                .normal_list {
+                    >p {
+                        display: inline-block;
+                        font-size: 14px;
+                        padding: .3em .65em;
+                        background: var(--search_gray);
+                        margin: 0 .5em .5em 0;
+                        color: var(--deep_blue);
+                        @include border_radius(5px);
+                        &:hover,
+                        &.active {
+                            color: var(--white);
+                            background: var(--blue);
+                            cursor: pointer;
+                        }
+                    }
+                    select {
+                        width: initial;
+                        border: var(--border_gary);
+                        background: var(--white);
+                        padding: .3em .65em;
+                        margin: 0 .5em .5em 0;
+                    }
+                }
+            }
+            .right_box {
+                padding-left: 1em;
+                .more_text {
+                    font-size: 14px;
+                    border: 1px var(--blue) solid;
+                    padding: .25em .6em;
+                    color: var(--blue);
+                    @include border_radius(5px);
+                    &:hover {
+                        background: var(--light_blue);
+                    }
+                }
+                .input_between_box {
+                    margin: .3em .75em 0 0;
+                    input {
+                        max-width: 3.5em;
+                        border: 0;
+                        border-bottom: var(--border_gary);
+                        background: none;
+                    }
+                    span {
+                        padding: 0 0.25em;
+                    }
+                }
+                .right_item {
+                    button {
+                        padding: .25em .6em;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.car_more_sec {
+    padding: .5em 0;
+    border-top: var(--border_gary);
+    margin: .5em 0;
+    .car_more_box {
+        >.item {
+            width: 100%;
+            padding: 0 .5em;
+            .sub_box {
+                .sub_item {
+                    width: 100%;
+                    >p {
+                        min-width: 2em;
+                        color: var(--orange);
+                    }
+                    >ul {
+                        li {
+                            display: inline-block;
+                            margin: 0 .75em .75em 0;
+                            &:hover {
+                                cursor: pointer;
+                                color: var(--blue);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//搜尋結果
+.search_result_box {
+    margin: 1em 0 0;
+    .result_cont {
+        width: 100%;
+        .title {
+            font-size: 18px;
+            padding: .3em .5em 0 0;
+        }
+        .result_list {
+            >p {
+                background: var(--deep_gary);
+                color: var(--light_gary);
+                @include border_radius(5px);
+                font-size: 15px;
+                padding: .3em .75em;
+                margin: 0 .5em .5em 0;
+                >i {
+                    padding-left: .3em;
+                    cursor: pointer;
+                }
+            }
+        }
+        .result_clear {
+            background: var(--light_blue);
+            color: var(--deep_blue);
+            @include border_radius(5px);
+            font-size: 15px;
+            padding: .3em .75em;
+            margin: 0 .5em .5em 0;
+            cursor: pointer;
+            >i {
+                padding-right: .3em;
+            }
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}
+
+.m_search_result_box {
+    @extend .search_result_box;
+    padding: .5em .5em 0;
+    margin: 0;
+    .find_info {
+        color: var(--red);
+    }
+}
+
+.m_search_tag_box {
+    @extend .search_result_box;
+    margin: 0;
+    padding: .5em .5em 0;
+    .result_cont {
+        .result_list {
+            >p {
+                font-size: $text_ss;
+                padding: .3em .5em;
+                margin: .35em .35em 0 0;
+            }
+        }
+        .result_clear {
+            font-size: $text_ss;
+            padding: .3em .5em;
+            margin: .35em .35em 0 0;
+        }
+    }
+}
+
+//二手車列表頁面
+.sec_car_box {
+    @include rwd($col_md) {
+        display: block;
+    }
+    .sec_car_left {
+        .select_top_box {
+            margin-bottom: 1em;
+        }
+    }
+    .sec_car_right {
+        max-width: var(--sec_car_right_width);
+        margin-left: 1.5em;
+        @include rwd($col_md) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.normal_left_item {
+    margin-bottom: 2em;
+    &:last-child {
+        .decor_style {
+            display: none;
+        }
+    }
+}
+
+.introduce_box {
+    .introduce_item {
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        border-bottom: var(--border_gary);
+        border-color: var(--gary);
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+        .intro_top_box {
+            >.img_box {
+                >img {
+                    max-width: var(--car_introduce_size);
+                }
+            }
+            >.text_box {
+                padding-left: 1em;
+                >p {
+                    margin-bottom: .45em;
+                }
+                >span {
+                    color: var(--deep_gary);
+                    display: block;
+                }
+                >a {
+                    margin-top: .5em;
+                    &:hover {
+                        opacity: .85;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.car_info {
+    .car_info_list {
+        p {
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--blue);
+            padding: .5em .65em;
+            margin-right: .65em;
+            border: var(--border_blue);
+            >i {
+                padding-left: .2em;
+            }
+            &:hover,
+            &.active {
+                background: var(--light_blue);
+            }
+        }
+    }
+}
+
+.select_car {
+    background: var(--gary);
+    @include rwd($col_md) {
+        background: var(--white);
+    }
+    .select_car_list {
+        >p {
+            font-size: 14px;
+            cursor: pointer;
+            padding: .5em .65em;
+            color: var(--deep_gary);
+            @include rwd($col_md) {
+                font-size: 18px;
+                line-height: 2;
+                padding: 0 0.3em;
+            }
+            >i {
+                padding-right: .2em;
+            }
+            &:hover,
+            &.active {
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+.right_style_box {
+    padding: 0.5em;
+    border: var(--border_gary);
+    @include rwd($col_md) {
+        padding: 0;
+        border: 0;
+    }
+}
+
+.sec_car_right {
+    .right_show_box {
+        margin: 0 auto 1.5em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            font-size: 18px;
+            margin: .3em 0 .75em;
+            @include rwd($col_md) {
+                text-align: center;
+                margin: .5em 0 .75em;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+        .tag_box {
+            .tag_item {
+                font-size: 14px;
+                padding: .3em .75em;
+                margin: 0 .5em .5em 0;
+                background: var(--light_gary);
+                display: inline-block;
+                @include border_radius(50px);
+                color: var(--deep_blue);
+                &:hover {
+                    background: var(--light_blue);
+                }
+            }
+        }
+    }
+}
+
+.m_hot_box {
+    .m_hot_item {
+        background: var(--light_gary);
+        padding: .5em;
+        margin-bottom: 1.25em;
+        .title {
+            margin: 0.5em 0.5em 1em;
+        }
+        .tag_box {
+            .tag_item {
+                font-size: 14px;
+                @include border_radius(50px);
+                color: var(--white);
+                font-size: 14px;
+                padding: 0.5em 1.5em;
+                margin: 0 0.5em 0.5em 0;
+                background: var(--deep_gary);
+                display: inline-block;
+                &:hover {
+                    opacity: .85;
+                    ;
+                }
+            }
+        }
+    }
+}
+
+.m_hot_car_box {
+    background: var(--gary);
+    padding: .5em 0;
+    .used_car_box {
+        padding: 0 .5em;
+    }
+    .used_car_info {
+        >p {
+            font-size: 14px !important;
+            margin-top: .5em;
+            background: none !important;
+        }
+    }
+}
+
+.news_box {
+    >a {
+        margin-bottom: .75em;
+        padding-bottom: .5em;
+        border-bottom: var(--border_gary);
+        display: block;
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+        .img_box {
+            >img {
+                max-width: 100%;
+                display: block;
+            }
+            margin-bottom: .35em;
+        }
+    }
+}
+
+.m_article_box {
+    @extend .news_box;
+    .tag_text {
+        color: var(--w_blue);
+        font-size: 14px;
+        padding: .5em 0;
+        display: block;
+    }
+}
+
+//車子列表
+.main_sec_car_cont {
+    >.item {
+        border: var(--border_gary);
+        padding: .5em;
+        margin-bottom: 1.25em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            border-color: var(--blue);
+        }
+        .img_box {
+            overflow: hidden;
+            width: var(--car_img_size);
+            border: var(--border_gary);
+            @include rwd($col_md) {
+                width: 150px;
+            }
+            >img {
+                width: 100%;
+                display: block;
+            }
+        }
+        .m_from_img {
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: var(--white);
+            padding: .25em;
+            border-radius: 5px 0 0 0;
+            border: var(--border_gary);
+            >img {
+                max-width: 2.5em;
+                display: block;
+            }
+        }
+        .info_box {
+            padding: 0 1.25em;
+            @include rwd($col_md) {
+                width: 100%;
+                padding: 0 0 0 0.5em;
+            }
+            .info_cont {
+                @include rwd($col_md) {
+                    width: 100%;
+                }
+                &.car_info_cont {
+                    >p {
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        @include rwd($col_md) {
+                            -webkit-line-clamp: 2;
+                        }
+                    }
+                }
+            }
+            .title {
+                font-size: 26px;
+                @include rwd($col_md) {
+                    font-size: 18px;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                }
+            }
+            .text {
+                margin: .3em 0;
+                color: var(--text_gary);
+                font-size: 15px;
+            }
+            .tag_group_box {
+                @include rwd($col_md) {
+                    background: var(--light_gary);
+                }
+            }
+        }
+        .sec_info_box {
+            .info_des {
+                @extend .main_info;
+                .info_item {
+                    width: initial;
+                    .top_text {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .bottom_group {
+                >p {
+                    font-size: 13px;
+                    color: var(--deep_gary);
+                }
+                .bottom_img {
+                    >img {
+                        max-width: 4.5em;
+                        margin: 0 .5em;
+                    }
+                }
+            }
+        }
+        .tag_group {
+            @extend .car_lable_box;
+            display: inline-grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            .item {
+                border: 0;
+                padding: .35em .5em;
+                font-size: 13px;
+                background: var(--light_blue);
+                pointer-events: none !important;
+                @include rwd($col_md) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.tag_group_sec {
+    padding: 1em 0;
+    .tag_group_box {
+        padding-right: 1.5em;
+    }
+    .info_des {
+        .info_item {
+            .top_text,
+            .impor_text {
+                font-size: 20px;
+            }
+            .main_impor_text {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.car_bottom_group {
+    >p {
+        font-size: 13px;
+        color: var(--deep_gary);
+    }
+    .bottom_img {
+        >img {
+            max-width: 4.5em;
+            margin: 0 0.5em;
+        }
+    }
+}
+
+//文章列表
+.main_article_cont {
+    @extend .main_sec_car_cont;
+    .item {
+        @include rwd($col_md) {
+            display: block;
+        }
+        .img_box {
+            @include rwd($col_md) {
+                width: 100%;
+            }
+        }
+        .m_top_time_box {
+            margin: .4em 0;
+            >p {
+                background: var(--light_blue);
+                color: var(--deep_blue);
+                font-size: 14px;
+                padding: .35em;
+                display: inline-block;
+            }
+            >span {
+                color: var(--deep_gary);
+                font-size: 13px;
+            }
+        }
+        .top_tag_box {
+            .top_tag_list {
+                color: var(--deep_gary);
+                font-size: 15px;
+                padding: .35em 0;
+                @include rwd($col_md) {
+                    padding: .35em 0 0;
+                }
+                li {
+                    padding: 0 .35em .35em 0;
+                    @include rwd($col_md) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .info_box {
+            @include rwd($col_md) {
+                padding: 0;
+            }
+            .info_cont {
+                width: 100%;
+            }
+        }
+        .bottom_box {
+            >p {
+                font-size: 18px;
+                color: var(--w_blue);
+            }
+            >span {
+                color: var(--deep_gary);
+            }
+        }
+    }
+}
+
+//影音列表
+.main_video_cont {
+    @extend .main_article_cont;
+    >.item {
+        .img_box {
+            width: var(--video_sizs);
+            @include rwd($col_md) {
+                width: 100%;
+                margin-bottom: .5em;
+            }
+        }
+    }
+}
+
+.m_search_cont {
+    // >select {
+    //     padding: .25em .5em;
+    //     text-align: center;
+    //     border: none;
+    //     padding: 0.75em 0.5em;
+    //     font-size: 16px;
+    // }
+    .m_seclet_style_box {
+        width: 100%;
+        padding: .5em;
+        .car_info {
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            width: 100%;
+            .car_info_list {
+                -moz-flex: 1;
+                -webkit-box-flex: 1;
+                -o-box-flex: 1;
+                -ms-flex: 1;
+                box-flex: 1;
+                flex: 1;
+                min-width: 0;
+                >p {
+                    white-space: nowrap;
+                }
+                .list_box {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    white-space: nowrap;
+                    width: 100%;
+                    margin: 0;
+                    padding-bottom: .75em;
+                    p {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m_search_list_box {
+    width: 100%;
+    height: var(--m_search_list_height);
+    // background: var(--light_blue);
+    // color: var(--deep_blue);
+    .m_search_item {
+        cursor: pointer;
+        >i {
+            padding: 0 0 .5em .25em;
+        }
+    }
+}
+
+.m_slider_header {
+    .m_search_list_box {
+        .m_search_item {
+            color: var(--deep_gary);
+            &.active {
+                color: var(--deep_blue);
+            }
+        }
+    }
+}
+
+.m_slider_cont {
+    background: var(--bg_gary);
+    padding-bottom: 1em;
+    &.has_footer {
+        padding-bottom: calc(var(--m_slider_footer) + 1em);
+    }
+    .m_slider_list {
+        .item_box {
+            .title,
+            .item_cont {
+                padding: .65em .7em .5em;
+                .lable_sub_list {
+                    .img_box {
+                        padding-right: .55em;
+                        >img {
+                            max-width: var(--lable_sub_img);
+                        }
+                    }
+                    .lable_sub_item {
+                        margin-bottom: 0.5em;
+                        padding-bottom: 0.5em;
+                        border-bottom: var(--border_gary);
+                        border-color: var(--gary);
+                        &:last-child {
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+                        .lable_sub_info {
+                            >span {
+                                padding-top: .25em;
+                                color: var(--deep_gary);
+                            }
+                        }
+                    }
+                }
+                .self_price_box {
+                    margin-bottom: 1em;
+                    padding-bottom: 1em;
+                    border-bottom: var(--border_gary);
+                    >input {
+                        border: var(--border_gary);
+                        padding: 0.5em;
+                        @include border_radius(5px);
+                        height: 33px;
+                    }
+                    >span {
+                        padding: 0 .35em;
+                    }
+                    >button {
+                        margin-left: .5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m_slider_footer {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    bottom: 0;
+    height: var(--m_slider_footer);
+    @include box_shadow(var(--normal_shadow));
+    >button {
+        @include border_radius(0);
+        font-size: 16px;
+        &.clear_btn {
+            min-width: var(--m_slider_clear);
+        }
+    }
+}
+
+.self_price_list {
+    @extend .car_model_box;
+    margin-top: 0;
+    // padding-top: 1em;
+    // border-top: var(--border_gary);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: var(--self_price_column_gap);
+    grid-row-gap: var(--self_price_column_gap);
+    -webkit-column-gap: var(--self_price_column_gap);
+    column-gap: var(--self_price_column_gap);
+    row-gap: var(--self_price_column_gap);
+    @include rwd($col_md) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .item {
+        @include border_radius(5px);
+        font-size: 15px;
+        padding: .5em .15em;
+        &.active {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+    }
+}
+
+.two_column_gap {
+    @extend .car_model_box;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.intro_bottom_list {
+    @extend .two_column_gap;
+    .item {
+        border: 0;
+        padding: 0;
+        >.title {
+            padding-left: .35em;
+            margin-bottom: .5em;
+            color: var(--blue);
+            border-left: 3px solid;
+        }
+        >span {
+            font-size: 15px;
+            padding-left: .5em;
+            display: block;
+        }
+    }
+}
+
+.four_column_gap {
+    @extend .car_model_box;
+    margin-top: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .item {
+        @include border_radius(5px);
+        font-size: 13px;
+        padding: .5em .15em;
+        &.active {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+    }
+}
+
+.five_column_gap {
+    @extend .four_column_gap;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+.color_column {
+    .color_unlimit {
+        >p {
+            margin-right: .5em;
+            font-size: 13px;
+            padding: .5em;
+            @include border_radius(5px);
+            border: var(--border_gary);
+            &.active {
+                border-color: var(--blue);
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+.six_column_gap {
+    @extend .four_column_gap;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .item {
+        padding: 0;
+        @include border_radius(0);
+        border: none;
+        .color_round {
+            margin: 0 auto .5em;
+            border: var(--border_gary);
+            border-color: var(--gary);
+            @include border_radius(50%);
+            width: var(--car_color_size);
+            height: var(--car_color_size);
+        }
+    }
+}
+
+@include rwd($col_md) {
+    .m_tag_group_box {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        .tag_group {
+            grid-column-gap: var(--m_car_lable_space);
+            grid-row-gap: var(--m_car_lable_space);
+            -webkit-column-gap: var(--m_car_lable_space);
+            column-gap: var(--m_car_lable_space);
+            row-gap: var(--m_car_lable_space);
+            padding: .25em 0;
+            .item {
+                padding: 0 .5em !important;
+                background: var(--light_gary) !important;
+                color: var(--deep_gary);
+                border-right: var(--border_gary)!important;
+                border-radius: 0;
+                &:nth-child(3n) {
+                    border-right: 0!important;
+                }
+            }
+        }
+    }
+    .m_sec_info_cont {
+        .info_des {
+            padding-top: .5em;
+            font-size: 15px;
+        }
+        .info_item {
+            padding: 0 .5em 0 0 !important;
+            .title {
+                font-size: 15px;
+            }
+            .top_text {
+                font-size: 15px!important;
+            }
+            &:last-child {
+                padding: 0!important;
+            }
+            &:first-child {
+                .impor_text {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.car_pic_box {
+    @extend .car_model_box;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @include rwd($col_md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 0;
+    }
+    @include rwd($col_sd) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .item {
+        .used_car_info {
+            width: 100%;
+            margin-top: .75em;
+            .title {
+                padding-bottom: .25em;
+                font-size: 18px;
+                border-bottom: var(--border_gary);
+            }
+            .m_sec {
+                padding: .25em 0;
+                .m_sec_item {
+                    color: var(--deep_gary);
+                    display: inline-block;
+                    border-right: var(--border_gary);
+                    padding-right: .25em;
+                    margin: .1em;
+                    &:last-child {
+                        border-right: 0;
+                        padding-right: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .m_dec_box {
+                >p {
+                    padding-right: .25em;
+                    display: inline-block;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        .sec_info {
+            @extend .car_lable_box;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            >p {
+                &.item {
+                    border: 0;
+                    padding: .35em .5em;
+                    font-size: 14px;
+                    background: var(--light_blue);
+                    &:hover {
+                        pointer-events: none !important;
+                        background: var(--light_blue);
+                    }
+                }
+            }
+        }
+        .img_box {
+            >img {
+                max-width: 100%;
+                display: block;
+            }
+            .car_origin_box {
+                bottom: 0;
+                right: 0;
+                display: inline-block;
+                padding: 0.35em 0.65em;
+                border-radius: 10px 0 0 0;
+                border: var(--border_gary);
+                >img {
+                    max-width: 80px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.normal_car_info_box {
+    .title {
+        font-size: $text_lg;
+        margin-bottom: .35em;
+        @include rwd($col_md) {
+            font-size: $text_ml;
+        }
+    }
+    .text {
+        color: var(--deep_gary);
+    }
+    h1 {
+        &.title {
+            font-size: 22px;
+        }
+    }
+}
+
+.catalog_box {
+    font-size: $text_mg;
+    color: var(--blue);
+    padding-left: .7em;
+    a {
+        &.catalog_item {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .catalog_item {
+        display: block;
+        margin-bottom: .5em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .sub_catalog {
+            padding-left: 1em;
+            >a {
+                padding-top: .25em;
+                display: block;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.catalog_column_box {
+    @extend .catalog_box;
+    color: var(--deep_gary);
+}
+
+.decor_style {
+    margin-top: 1.75em;
+    opacity: .65;
+    height: .25em;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient( -45deg, #d0d0d0 0, #d0d0d0 1px, var(--white) 0, var(--white) 50%);
+}
+
+.top_section {
+    margin: 1em 0;
+    @include rwd($col_md) {
+        margin: .75em 0;
+    }
+    .left_box {
+        .tag {
+            font-size: 18px;
+            color: var(--w_blue);
+            padding-right: .5em;
+            @include rwd($col_md) {
+                font-size: 16px;
+                border-right: var(--border_gary);
+                margin-right: 0.5em;
+            }
+        }
+        >span {
+            color: var(--text_gary);
+        }
+    }
+    .right_box {
+        background: var(--light_gary);
+        padding: .5em .75em;
+        >a {
+            font-size: 20px;
+            margin-right: .5em;
+            padding: .2em;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.facebook_icon {
+                color: var(--color_fb);
+            }
+            &.line_icon {
+                color: var(--color_line);
+            }
+            &.twitter_icon {
+                color: var(--color_twitter);
+            }
+            &.share_icon {
+                color: var(--deep_gary);
+            }
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}
+
+//文章內頁
+.article_show {
+    >p,
+    .img_box {
+        margin-bottom: 1em;
+    }
+    // * {
+    //     letter-spacing: 1.5px;
+    // }
+}
+
+.article_h1 {
+    // font-size: 20px !important;
+    padding: 0!important;
+}
+
+.bottom_tag {
+    margin-top: 1.5em;
+    background: var(--light_gary);
+    padding: .75em 1em;
+    color: var(--deep_gary);
+    font-size: 15px;
+    @include rwd($col_md) {
+        display: block;
+    }
+    >p {
+        padding-right: .5em;
+        @include rwd($col_md) {
+            padding-bottom: .5em;
+        }
+    }
+    >ul {
+        li {
+            padding: 0 .35em .35em 0
+        }
+    }
+}
+
+//無資料
+.no_data_box {
+    padding: 1em;
+    font-size: 18px;
+    @include rwd($col_md) {
+        padding: .5em 1em 1em;
+    }
+}
+
+//video
+.video_box {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//tab
+
+/* 頁籤的內容框寬度 */
+
+div#hcg_tabs {
+    width: 100%;
+}
+
+
+/* 頁籤的標籤基本設定 */
+
+#tabs_nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* 頁籤的標籤間隔 */
+
+#tabs_nav a:nth-child(even) {
+    margin: 0 3px;
+}
+
+#tabs_nav a:last-child {
+    margin: 0 0 0 3px;
+}
+
+
+/* 頁籤的標籤設定 */
+
+a.tabs_menu {
+    display: inline-block;
+    background-color: var(--deep_blue);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    padding: 5px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 2px var(--deep_blue);
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+}
+
+
+/* 被選的頁籤白色顯示 */
+
+a.tabs_menu.tabs_menu_active {
+    background-color: var(--white);
+    border: solid 1px var(--deep_blue);
+    color: var(--deep_blue);
+    border-bottom: 0;
+}
+
+
+/* 頁籤的內容框 */
+
+.tabs_content {
+    border: solid 1px var(--deep_blue);
+    margin-top: -1px;
+    background-color: var(--white);
+    overflow: hidden;
+    margin-bottom: 2.5em;
+}
+
+
+/* 避免一開始全部顯示 */
+
+.tabs_panel {
+    display: none;
+    overflow: auto;
+    padding: 1em .75em;
+    font-size: 14px;
+}
+
+// .tabs_content {
+.tab_item {
+    .no_tab_title {
+        padding-left: .7dem;
+    }
+    .tab_top_box {
+        >.img_box {
+            margin: .5em 0;
+            >img {
+                max-width: var(--tab_img);
+            }
+        }
+        >.text_box {
+            >span {
+                color: var(--deep_gary);
+            }
+        }
+    }
+    .tab_bottom_box {
+        margin-top: 1.2em;
+        .tab_bottom_list {
+            >.item {
+                margin-bottom: .7em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .title {
+                    padding-left: .35em;
+                    margin-bottom: .35em;
+                    color: var(--blue);
+                    border-left: 3px solid;
+                }
+                >span {
+                    padding-left: .5em;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.no_tab_item {
+    @extend .tab_item;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: var(--border_gary);
+    border-color: var(--gary);
+    &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    >a {
+        margin-top: 1em;
+    }
+}
+
+// }
+//tag end
+.pagemark_div {
+    margin: 1.5em 0;
+    font-size: 15px;
+    //分頁
+    .pagemark_area {
+        position: relative;
+        .pagemark_box {
+            height: 100% !important;
+            .pagemark_cont {
+                margin: 0;
+                padding: 0;
+                >a {
+                    border: var(--border_gary);
+                    padding: .25em .45em;
+                    margin: 0 .3em;
+                    background: var(--white);
+                    cursor: pointer;
+                    &:hover,
+                    &.active {
+                        border-color: var(--blue);
+                        color: var(--blue);
+                    }
+                }
+            }
+        }
+    }
+    //總筆數
+    .totalNum {
+        position: relative;
+        p {
+            border-right: 0;
+            border-left: 0;
+        }
+    }
+}
+
+.m_pagemark_div {
+    @extend .pagemark_div;
+    .pagemark_box {
+        .pagemark_cont {
+            >a {
+                color: var(--deep_gary);
+                &.pagemark_num {
+                    border: none;
+                }
+                &.active {
+                    background: var(--blue);
+                    color: var(--white) !important;
+                }
+                &.disabled {
+                    color: var(--pagemark_disabled);
+                    border-color: var(--pagemark_disabled);
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer_box {
+    .footer_top {
+        padding: 2em;
+        background: var(--footer_bg);
+        color: var(--footer_text_gary);
+        @include rwd($col_md) {
+            padding: 1em .7em;
+        }
+        .left_box {
+            padding-right: 2.5em;
+        }
+    }
+    .footer_bottom {
+        margin: 1.25em 0;
+        color: var(--footer_text_gary);
+        @include rwd($col_md) {
+            margin: 1em 0;
+        }
+        ul {
+            >li {
+                margin-right: .5em;
+                padding-right: .5em;
+                border-right: var(--border_gary);
+                &:last-child {
+                    border-right: 0;
+                }
+                >a {
+                    text-decoration: none;
+                    color: var(--blue);
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//mobile 選單
+.m_slider_box {
+    // display: none;
+    .m_slider_bg {
+        background: rgba(0, 0, 0, .5);
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        -webkit-backdrop-filter: blur(1.333333vw);
+        backdrop-filter: blur(1.333333vw);
+    }
+    .m_slider_body {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 11;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        margin-right: -100%;
+        transition: all .5s ease 0s;
+        padding-bottom: 1.5em;
+        background: var(--bg_gary);
+        &.open {
+            margin-right: 0;
+        }
+        .m_slider_close {
+            padding: 1em;
+            >i {
+                color: var(--close_color);
+                width: $text_xxl;
+            }
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}
+
+//mobile篩選廠牌
+.m_slider_lable_box {
+    @extend .m_slider_box;
+    .m_slider_body {
+        margin-right: initial;
+        background: none;
+        padding-bottom: 0;
+    }
+}
+
+//mobile廠牌列表
+.m_lable_sub_box {
+    display: none;
+    z-index: 99999;
+    padding: 1em;
+    @extend .m_slider_box;
+    .m_slider_bg,
+    .m_slider_body {
+        top: var(--m_search_list_height);
+    }
+    .m_slider_bg {
+        backdrop-filter: blur(0);
+    }
+    .m_slider_body {
+        background: var(--white);
+        &.open {
+            width: 85%;
+        }
+        .m_lable_sub_top_box {
+            padding: 1.25em;
+            .sub_top_img {
+                padding-right: .5em;
+                >img {
+                    max-width: var(--m_lable_sub_img);
+                }
+            }
+            >button {
+                width: 100%;
+                @include border_radius(20px);
+                margin-top: 1em;
+            }
+        }
+        .m_lable_sub_body_box {
+            padding: 0 1.25em 1.25em;
+            .item {
+                margin-bottom: .75em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .item_info {
+                    padding: .5em 0 .75em 0;
+                    border-bottom: var(--border_gary);
+                    border-color: var(--gary);
+                    margin-left: 1em;
+                }
+                label {
+                    color: var(--deep_gary);
+                }
+            }
+        }
+    }
+}
+
+.m_nav_box {
+    padding: 0 1em;
+    .item {
+        margin-bottom: .5em;
+        border-bottom: var(--border_gary);
+        &:last-child {
+            border-bottom: 0
+        }
+        >a {
+            color: var(--deep_blue);
+            padding: .5em .45em;
+            display: block;
+            margin-bottom: .5em;
+            &.active {
+                background: var(--deep_blue);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.m_car_icon {
+    >a {
+        padding: .35em .65em;
+        margin: 0 .5em .5em 0;
+        background: var(--light_blue);
+        display: inline-block;
+        color: var(--deep_blue);
+        &.active {
+            background: var(--deep_blue);
+            color: var(--white);
+        }
+    }
+}
+
+.m_car_lable {
+    @extend .m_car_icon;
+    >a {
+        background: var(--m_car_lable_bg);
+        &.active {
+            background: var(--og);
+            color: var(--deep_blue);
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// btn map
+$text_black:#181a20;
+$white:#fff;
+$main_color:#033975;
+$ogyellow:#FBB034;
+$btn_config:( default: ( class: 'default', color: $white, bg: $main_color, border-color: $main_color));
+@mixin button_variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    transition: background-color .15s;
+    border-color: $border;
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        color: $color;
+        // background-color: darken($background, 10%);
+        // border-color: darken($border, 8%);
+        background-color: $background; //背景顏色沒有加深,以background-image做效果 原始的是用darken($background, 10%);做效果
+        border-color: darken($border, 8%);
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)) !important;
+        // background-image: linear-gradient(rgba(255, 255, 255, .15), rgba(255, 255, 255, .15)) !important;
+        // box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), inset 0 -1px 0 rgba(255, 255, 255, .3), inset 0 0 0 1px rgba(255, 255, 255, .4) !important;
+        overflow: hidden;
+        outline: 0;
+    }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: $background;
+            border-color: $border;
+            // box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), inset 0 -1px 0 rgba(255, 255, 255, .3), inset 0 0 0 1px rgba(255, 255, 255, .4) !important;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+    //background
+    .bg {
+        background-color: $color;
+    }
+    .font {
+        color: $background;
+    }
+}
+
+//  badge
+@mixin badge_variant($color, $background) {
+    color: $color;
+    background: $background;
+}
+
+//background
+@mixin bg_variant($background) {
+    background: $background;
+}
+
+@mixin font_variant($background) {
+    color: $background;
+}

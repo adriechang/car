@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="....請自行帶入所需資料">
+    <title>小生懂車網-快速瀏覽你需要的中古車資訊</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- owl.carousel -->
+    <link rel="stylesheet" href="plugins/OwlCarousel2/css/owl.carousel.min.css"></link>
+    <link rel="stylesheet" href="plugins/OwlCarousel2/css/owl.theme.default.min.css"></link>
+    <script type="text/javascript" src="plugins/OwlCarousel2/owl.carousel.min.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!--表頭 start-->
+    <header class="index_header">
+        <div class="main_container">
+            <div class="header_box flex_box flex_align_center pd_0">
+                <!--手機板burger start-->
+                <div class="m_burger_box">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!--手機板burger end-->
+                <!--logo start-->
+                <div class="logo_box flex_equally">
+                    <a href="首頁.html"><img src="images/logo.png"></a>
+                </div>
+                <!--logo end-->
+                <!--右邊區塊 start-->
+                <div class="right_box flex_box">
+                    <!--選單 start-->
+                    <nav class="flex_box f_weight f_18">
+                        <a href="首頁.html" class="flex_box flex_align_center active">首頁</a>
+                        <a href="二手車列表.html" class="flex_box flex_align_center">找中古車</a>
+                        <a href="文章列表.html" class="flex_box flex_align_center">中古車文章</a>
+                        <a href="影音列表.html" class="flex_box flex_align_center">中古車影音</a>
+                    </nav>
+                    <!--選單 end-->
+                    <!--fb start-->
+                    <div class="social_box flex_box">
+                        <a href="" class="flex_box flex_align_center"><img src="images/fb.png"></a>
+                    </div>
+                    <!--fb end-->
+                </div>
+                <!--右邊區塊 end-->
+            </div>
+        </div>
+    </header>
+    <!--表頭 start-->
+    <!--篩選區塊 start-->
+    <div class="search_box">
+        <div class="main_container">
+            <h1 class="f_weight">快速瀏覽你需要的中古車資訊</h1>
+            <form action="">
+                <div class="search_cont flex_box">
+                    <!--item start-->
+                    <div class="item flex_equally">
+                        <!--桌機顯示 start-->
+                        <div class="select_box pos_relat web_show">
+                            <p class="select_text pos_absolute">廠牌：</p>
+                            <select>
+                         <option class="">廠牌不限</option>
+                         <option>TOYOTA</option>
+                         <option>TOYOTA2</option>
+                       </select>
+                        </div>
+                        <!--桌機顯示 end-->
+                        <!--手機顯示 start-->
+                        <div class="select_box pos_relat m_show flex_box">
+                            <p class="select_text pos_absolute flex_box flex_cont_center"><i class="fas fa-car-alt"></i></p>
+                            <select>
+                         <option class="">選擇車廠牌</option>
+                         <option>TOYOTA</option>
+                         <option>TOYOTA2</option>
+                       </select>
+                        </div>
+
+                        <!--手機顯示 end-->
+                    </div>
+                    <!--item end-->
+                    <section class="flex_box">
+                        <!--item start-->
+                        <div class="item flex_equally">
+                            <!--桌機顯示 start-->
+                            <div class="select_box pos_relat web_show">
+                                <p class="select_text pos_absolute">價格：</p>
+                                <select>
+                         <option>價格不限</option>
+                         <option>20-30萬</option>
+                         <option>30-40萬</option>
+                       </select>
+                            </div>
+                            <!--桌機顯示 end-->
+                            <!--手機顯示 start-->
+                            <div class="select_box pos_relat m_show flex_box">
+                                <p class="select_text pos_absolute flex_box flex_cont_center"><i class="fas fa-dollar-sign"></i></p>
+                                <select>
+                         <option class="">選擇價格</option>
+                         <option>20-30萬</option>
+                         <option>30-40萬</option>
+                       </select>
+                            </div>
+                            <!--手機顯示 end-->
+                        </div>
+                        <!--item end-->
+                        <!--item start-->
+                        <div class="item flex_equally">
+                            <!--桌機顯示 start-->
+                            <div class="select_box pos_relat web_show">
+                                <p class="select_text pos_absolute">年份：</p>
+                                <select>
+                         <option>年份不限</option>
+                         <option>5年以下</option>
+                         <option>10年以下</option>
+                       </select>
+                            </div>
+                            <!--桌機顯示 end-->
+                            <!--手機顯示 start-->
+                            <div class="select_box pos_relat m_show flex_box">
+                                <p class="select_text pos_absolute flex_box flex_cont_center"><i class="fas fa-calendar-alt"></i></p>
+                                <select>
+                             <option class="">選擇年份</option>
+                             <option>5年以下</option>
+                             <option>10年以下</option>
+                           </select>
+                            </div>
+                            <!--手機顯示 end-->
+                        </div>
+                    </section>
+                    <!--item end-->
+                    <!-- <div class="button_box"> -->
+                    <button type="button" class="btn mybtn mybtn_default">搜尋</button>
+                    <!-- </div> -->
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--篩選區塊 end-->
+    <!--內容 start-->
+    <section class="main_box">
+        <div class="main_container">
+            <div class="find_car_box bg_white box_style">
+                <p class="title_box text_center f_weight">想找什麼車？</p>
+                <!--手機板車種區塊 start-->
+                <div class="m_car_icon_box mflex_show">
+                    <a href="" class="item border_5 flex_equally text_center">
+                        <img src="images/car_icon/car.png">
+                        <p class="f_15">轎車</p>
+                    </a>
+                    <a href="" class="item border_5 flex_equally text_center">
+                        <img src="images/car_icon/suv.png">
+                        <p class="f_15">休旅車</p>
+                    </a>
+                    <a href="" class="item border_5 flex_equally text_center">
+                        <img src="images/car_icon/racing.png">
+                        <p class="f_15">跑車</p>
+                    </a>
+                    <a href="" class="item border_5 flex_equally text_center">
+                        <img src="images/car_icon/truck.png">
+                        <p class="f_15">貨車</p>
+                    </a>
+                    <a href="" class="item border_5 flex_equally text_center">
+                        <img src="images/car_icon/hatchback.png">
+                        <p class="f_15">掀背車</p>
+                    </a>
+                </div>
+                <!--手機板車種區塊 end-->
+                <!--廠牌+車種區塊 start-->
+                <div class="car_type_box pos_relat">
+                    <!--上面區塊 start-->
+                    <div class="right_box web_show">
+                        <div class="car_icon_box flex_box flex_align_center">
+                            <a href="" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                <img src="images/car_icon/car.png">
+                                <p class="text_nowrap">轎車</p>
+                            </a>
+                            <a href="" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                <img src="images/car_icon/suv.png">
+                                <p class="text_nowrap">休旅車</p>
+                            </a>
+                            <a href="" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                <img src="images/car_icon/racing.png">
+                                <p class="text_nowrap">跑車</p>
+                            </a>
+                            <a href="" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                <img src="images/car_icon/truck.png">
+                                <p class="text_nowrap">貨車</p>
+                            </a>
+                            <a href="" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                <img src="images/car_icon/hatchback.png">
+                                <p class="text_nowrap">掀背車</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!--上面區塊 end-->
+                    <!--下面區塊 start-->
+                    <div class="left_box">
+                        <section class="car_lable_box_sec">
+                            <div class="car_lable_box_new owl-carousel owl-theme">
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                                <div class="item_box">
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                    <a href="#" class="item border_5 flex_box flex_align_center flex_cont_center">
+                                        <img class="img_contain" src="images/car_logo/toyota.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!--下面區塊 end-->
+
+                </div>
+                <!--廠牌+車種區塊 end-->
+                <!--車款區塊 start-->
+                <div class="car_model_box">
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car/1.png">
+                        <div class="car_text f_15 flex_box flex_align_center flex_cont_center ">
+                            <p>TOYOTA YRTIS</p>
+                        </div>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car/1.png">
+                        <p class="car_text f_15 text_center">TOYOTA YRTISTOYOTA YRTISTOYOTA </p>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car/1.png">
+                        <p class="car_text f_15 text_center">TOYOTA YRTISTOYOTA YRTISTOYOTA </p>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car/1.png">
+                        <p class="car_text f_15 text_center">TOYOTA YRTISTOYOTA YRTISTOYOTA </p>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car/1.png">
+                        <p class="car_text f_15 text_center">TOYOTA YRTISTOYOTA YRTISTOYOTA </p>
+                    </a>
+
+                </div>
+                <!--車款區塊 end-->
+            </div>
+            <!--最新中午車資料 start-->
+            <div class="main_used_car box_style">
+                <p class="title_box text_center f_weight">最新中古車資料</p>
+                <div class="used_car_box main_used_car_box owl-carousel owl-theme">
+                    <a href="#" class=" item border_5 bg_white flex_box flex_align_center flex_dire">
+                        <div class="img_box pos_relat img_contain">
+                            <img src="images/car_hasBg/1.png">
+                            <div class="car_origin_box pos_absolute bg_white">
+                                <img src="images/abc.png">
+                            </div>
+                        </div>
+                        <!--資訊區 start-->
+                        <div class="used_car_info">
+                            <p class="title f_weight text_center">E89 sDrive20i 2012</p>
+                            <div class="main_info flex_box flex_align_center flex_between">
+                                <div class="info_item text_center">
+                                    <p class="top_text">價格</p>
+                                    <p class="impor_text f_weight font_red">25.2</p>
+                                    <p class="bottom_text">萬</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">年份</p>
+                                    <p class="impor_text f_weight">2016</p>
+                                    <p class="bottom_text">年</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">里程</p>
+                                    <p class="impor_text">6.5萬</p>
+                                    <p class="bottom_text">km</p>
+                                </div>
+                            </div>
+                            <div class="sec_info">
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">手自排</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">汽油</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">藍色</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">5人座</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                            </div>
+                        </div>
+                        <!--資訊區 end-->
+                    </a>
+                    <a href="#" class=" item border_5 bg_white flex_box flex_align_center flex_dire">
+                        <div class="img_box pos_relat img_contain">
+                            <img src="images/car_hasBg/1.png">
+                            <div class="car_origin_box pos_absolute bg_white">
+                                <img src="images/abc.png">
+                            </div>
+                        </div>
+                        <!--資訊區 start-->
+                        <div class="used_car_info">
+                            <p class="title f_weight text_center">E89 sDrive20i 2012</p>
+                            <div class="main_info flex_box flex_align_center flex_between">
+                                <div class="info_item text_center">
+                                    <p class="top_text">價格</p>
+                                    <p class="impor_text f_weight font_red">25.2</p>
+                                    <p class="bottom_text">萬</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">年份</p>
+                                    <p class="impor_text f_weight">2016</p>
+                                    <p class="bottom_text">年</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">里程</p>
+                                    <p class="impor_text">6.5萬</p>
+                                    <p class="bottom_text">km</p>
+                                </div>
+                            </div>
+                            <div class="sec_info">
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">手自排</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">汽油</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">藍色</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">5人座</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                            </div>
+                        </div>
+                        <!--資訊區 end-->
+                    </a>
+                    <a href="#" class=" item border_5 bg_white flex_box flex_align_center flex_dire">
+                        <div class="img_box pos_relat img_contain">
+                            <img src="images/car_hasBg/1.png">
+                            <div class="car_origin_box pos_absolute bg_white">
+                                <img src="images/abc.png">
+                            </div>
+                        </div>
+                        <!--資訊區 start-->
+                        <div class="used_car_info">
+                            <p class="title f_weight text_center">E89 sDrive20i 2012</p>
+                            <div class="main_info flex_box flex_align_center flex_between">
+                                <div class="info_item text_center">
+                                    <p class="top_text">價格</p>
+                                    <p class="impor_text f_weight font_red">25.2</p>
+                                    <p class="bottom_text">萬</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">年份</p>
+                                    <p class="impor_text f_weight">2016</p>
+                                    <p class="bottom_text">年</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">里程</p>
+                                    <p class="impor_text">6.5萬</p>
+                                    <p class="bottom_text">km</p>
+                                </div>
+                            </div>
+                            <div class="sec_info">
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">手自排</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">汽油</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">藍色</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">5人座</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                            </div>
+                        </div>
+                        <!--資訊區 end-->
+                    </a>
+                    <a href="#" class=" item border_5 bg_white flex_box flex_align_center flex_dire">
+                        <div class="img_box pos_relat img_contain">
+                            <img src="images/car_hasBg/1.png">
+                            <div class="car_origin_box pos_absolute bg_white">
+                                <img src="images/abc.png">
+                            </div>
+                        </div>
+                        <!--資訊區 start-->
+                        <div class="used_car_info">
+                            <p class="title f_weight text_center">E89 sDrive20i 2012</p>
+                            <div class="main_info flex_box flex_align_center flex_between">
+                                <div class="info_item text_center">
+                                    <p class="top_text">價格</p>
+                                    <p class="impor_text f_weight font_red">25.2</p>
+                                    <p class="bottom_text">萬</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">年份</p>
+                                    <p class="impor_text f_weight">2016</p>
+                                    <p class="bottom_text">年</p>
+                                </div>
+                                <div class="info_item text_center">
+                                    <p class="top_text">里程</p>
+                                    <p class="impor_text">6.5萬</p>
+                                    <p class="bottom_text">km</p>
+                                </div>
+                            </div>
+                            <div class="sec_info">
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">手自排</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">汽油</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">藍色</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">5人座</p>
+                                <p class="item border_5 flex_box flex_align_center flex_cont_center">台中市</p>
+                            </div>
+                        </div>
+                        <!--資訊區 end-->
+                    </a>
+                </div>
+                <div class="see_more_btn text_center">
+                    <a href="" class="more_item f_16 btn mybtn mybtn_default f_16">看更多中古車</a>
+                </div>
+            </div>
+            <!--最新中午車資料 end-->
+            <!--買中古車絕對要知道的二手車資訊 start-->
+            <div class="sec_carinfo_box bg_white box_style">
+                <p class="title_box text_center f_weight">買中古車絕對要知道的二手車資訊</p>
+                <div class="sec_carinfo_cont">
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car_info/1.png">
+                        <div class="car_text">
+                            <p>展示車/領牌車/試乘車/試裝車/這些車到底是新車還是二手車？真的比較便宜嗎？一張圖表秒搞懂</p>
+                        </div>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car_info/1.png">
+                        <div class="car_text">
+                            <p>展示車/領牌車/試乘車/試裝車</p>
+                        </div>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car_info/1.png">
+                        <div class="car_text">
+                            <p>展示車/領牌車/試乘車/試裝車/這些車到底是新車還是二手車？真的比較便宜嗎？一張圖表秒搞懂</p>
+                        </div>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car_info/1.png">
+                        <div class="car_text">
+                            <p>展示車/領牌車/試乘車/試裝車/這些車到底是新車還是二手車？真的比較便宜嗎？一張圖表秒搞懂</p>
+                        </div>
+                    </a>
+                    <a href="#" class="item border_5 flex_box flex_align_center flex_dire">
+                        <img class="img_contain" src="images/car_info/1.png">
+                        <div class="car_text">
+                            <p>展示車/領牌車/試乘車/試裝車/這些車到底是新車還是二手車？真的比較便宜嗎？一張圖表秒搞懂</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="see_more_btn text_center">
+                    <a href="" class="more_item f_16 btn mybtn mybtn_default f_16">看更多中古車文章</a>
+                </div>
+            </div>
+            <!--買中古車絕對要知道的二手車資訊 end-->
+        </div>
+    </section>
+    <!--內容 end-->
+    <!--footer start-->
+    <footer class="footer_box">
+        <!--top區塊 start-->
+        <div class="footer_top">
+            <div class="main_container flex_box">
+                <!--左邊 start-->
+                <div class="left_box web_show">
+                    <p class="f_weight f_18">網站名稱</p>
+                    <span>www.carcar.com.tw</span>
+                </div>
+                <!--左邊 end-->
+                <!--右邊 start-->
+                <div class="right_box">
+                    <p class="f_14">本網站僅為提供車輛出售資訊的參考平台，並不涉入其中的任何諮詢、交易。本網站對該車輛之產權及其他相關資訊亦不做任何實質或形式上之審查。就本網站中所載一切車輛的資訊、文字、照片、圖形、產權、廣告內容、或其他資料（以下簡稱『內容』），無論其為公開張貼或私下傳送，若有不實或違法情事，均為『內容』提供者之責任，本站概不負責也不承擔任何法律責任。</p>
+                </div>
+                <!--右邊 end-->
+            </div>
+        </div>
+        <!--top區塊 end-->
+        <div class="footer_bottom">
+            <ul class="flex_box flex_align_center flex_cont_center f_15">
+                <li><a href="">隱私權政策</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li>©2023 by <a href="">小生懂車網</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!--footer end-->
+    <!--手機版選單 start-->
+    <div class="m_slider_box m_slider_style pos_relat jp_nav_box">
+        <div class="m_slider_body">
+            <!--close start-->
+            <div class="m_slider_close flex_box">
+                <i class="fas fa-times f_24 text_center slider_close_btn cur_pointer"></i>
+            </div>
+            <!--close end-->
+            <!--選單區塊 start-->
+            <nav class="m_nav_box">
+                <div class="item">
+                    <a href="首頁.html" class="f_weight f_20">首頁</a>
+                </div>
+                <div class="item">
+                    <a href="" class="f_weight f_20">找中古車</a>
+                    <div class="m_car_icon flex_box flex_warp">
+                        <a href="" class="border_5">轎車</a>
+                        <a href="" class="border_5">休旅車</a>
+                        <a href="" class="border_5">跑車</a>
+                        <a href="" class="border_5">貨車</a>
+                        <a href="" class="border_5">油車</a>
+                        <a href="" class="border_5">電動車</a>
+                        <a href="" class="border_5">油電車</a>
+
+                    </div>
+                    <div class="m_car_lable flex_box flex_warp">
+                        <a href="" class="border_5">TOYOTA</a>
+                        <a href="" class="border_5">BMW</a>
+                        <a href="" class="border_5">TOYOTA</a>
+                        <a href="" class="border_5">BMW</a>
+                        <a href="" class="border_5">TOYOTA</a>
+                        <a href="" class="border_5">BMW</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="" class="f_weight f_20">中古車文章</a>
+                </div>
+                <div class="item">
+                    <a href="" class="f_weight f_20">中古車影音</a>
+                </div>
+            </nav>
+            <!--選單區塊 end-->
+        </div>
+    </div>
+    <!--手機版選單 end-->
+</body>
+
+
+</html>

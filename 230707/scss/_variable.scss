@@ -1,0 +1,98 @@
+:root {
+    --font_family_sans_serif: BinancePlex, Arial, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --container_width: 1200px;
+    --black: #000;
+    --red: #CD001D;
+    --text_black: #1E2329;
+    --white: #fff;
+    --light_gary: #f2f2f2;
+    --search_gray: #eaeaea;
+    --og: #ffd120;
+    --orange: #F87F15;
+    --bg_gary: #f8f9fa;
+    --deep_gary: #8c8c8c;
+    --gary: #ececec;
+    --blue: #0057B7;
+    --deep_blue: #033975;
+    --w_blue: #62befb;
+    --light_blue: #e5f4ff;
+    --light_yellow: #fffaeb;
+    --footer_bg: #ececec;
+    --footer_text_gary: #999797;
+    --close_color: #999797;
+    --m_car_lable_bg: #e8e8e8;
+    --bread_gary: #848484;
+    --bread_after_gary: #9b9b9b;
+    --pagemark_disabled: #d5d5d5;
+    --header_bg: #001e40;
+    --header_height: 50px;
+    --social_size: 32px;
+    --select_radius: 10px;
+    --select_min_width: 40%;
+    --car_lable_space: 0.8em;
+    --m_car_lable_space: 0.15em;
+    --car_lable_logo: 70px;
+    --car_model_size: 150px;
+    // --car_type_left_w: calc( 100% - 130px);
+    --car_type_left_w: 100%;
+    --border_gary: 1px solid #d9d9d9;
+    --border_blue: 1px solid var(--blue);
+    --see_more_size: 250px;
+    --normal_shadow: 0 0 5px rgba(0, 0, 0, .1);
+    --car_img_size: 300px;
+    --sec_car_right_width: 200px;
+    --m_search_list_height: 45px;
+    --lable_sub_img: 50px;
+    --m_lable_sub_img: 35px;
+    --self_price_column_gap: 1em;
+    --car_color_size: 30px;
+    --m_slider_footer: 45px;
+    --m_slider_clear: 7em;
+    --car_introduce_size: 350px;
+    --tab_img: 220px;
+    --video_sizs: 450px;
+    --logo_size: 25px;
+    --text_gary: #adadad;
+    --color_fb: #1877F2;
+    --color_line: #00B900;
+    --color_twitter: #2BA5DA;
+}
+
+//車子顏色
+$car_silver:#C0C0C0; //銀色
+$car_gary:#808080; //灰色
+$car_blue:#0000FF; //藍色
+$car_red:#FF0000; //紅色
+$car_green:#008002; //綠色
+$car_brown:#8B4512; //棕色
+$car_yellow:#FFFF00; //黃色
+$car_og:#FF6600; //橙色
+$car_purple:#800080; //紫色
+$car_pink:#FFBFCB; //粉色
+//一般文字變數
+$text_xxl: 24px;
+$text_xg: 22px;
+$text_xl: 20px;
+$text_lg: 18px;
+$text_ml: 16px;
+$text_mg: 15px;
+$text_md: 14px;
+$text_sm: 13px;
+$text_ss: 12px;
+//寬度比例
+$fullWidth:100%;
+$twoHalvesWidth:calc(100%/2);
+$threeHalvesWidth:calc(100%/3);
+$fourHalvesWidth:calc(100%/4);
+$sixHalvesWidth:calc(100%/6);
+//高度比例
+$fullHeight:100%;
+$twoHalvesHeight:calc(100%/2);
+$threeHalvesHeight:calc(100%/3);
+$fourHalvesHeight:calc(100%/4);
+$sixHalvesHeight:calc(100%/6);
+//button
+$button_font_md:14px;
+$buttonColor_white:#fff;
+$buttonColor_orange:#ffa111;
+$buttonBg_orange:#ffa111;
